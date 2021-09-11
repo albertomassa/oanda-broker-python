@@ -23,3 +23,4 @@ src/app/oanda_broker_cli.egg-info/
 src/app/oanda_broker_samples.egg-info/
 src/oanda_broker_samples.egg-info/
 NOTES
+output/

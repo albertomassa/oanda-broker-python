@@ -24,6 +24,7 @@ broker.api-token = $your_broker_api_token$
 | `src/account/account.py` | ob-accounts | Accounts List and Account Details |
 | `src/account/instrument.py` | ob-instruments | Instruments Details |
 | `src/account/trade.py` | ob-trades | Trade Details and Actions |
+| `src/account/chart.py` | ob-charts | Print Charts in CSV or PNG File |
 
 ## CLI-commands (examples)
 ```
@@ -36,6 +37,8 @@ ob-instruments candles --instrument EUR_USD --count 15 --granularity M15
 ob-trades list --account $account_id
 ob-trades stop --state LOSS
 
+ob-charts print_chart --instrument EUR_USD --count 50 --options data_visible
+
 (....) and more
 
 ```
@@ -46,6 +49,7 @@ ob-trades stop --state LOSS
 
 ## versioning
 
+* **0.0.2** - *charts support*
 * **0.0.1** - *initial work*
 
 ## authors

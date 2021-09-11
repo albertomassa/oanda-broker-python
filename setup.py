@@ -9,7 +9,8 @@ setup(
         'console_scripts': [
             'ob-accounts = account:main',
             'ob-instruments = instrument:main',
-            'ob-trades = trade:main'
+            'ob-trades = trade:main',
+            'ob-charts = chart:main'
         ]
     })
 

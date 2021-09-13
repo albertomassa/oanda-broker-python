@@ -37,7 +37,7 @@ ob-instruments candles --instrument EUR_USD --count 15 --granularity M15
 ob-trades list --account $account_id
 ob-trades stop --state LOSS
 
-ob-charts print_chart --instrument EUR_USD --count 50 --options data_visible
+ob-charts print_chart --instrument EUR_USD,GBP_USD --count 50 --options data_visible
 
 (....) and more
 
@@ -49,6 +49,7 @@ ob-charts print_chart --instrument EUR_USD --count 50 --options data_visible
 
 ## versioning
 
+* **0.0.3** - *multi-charts support*
 * **0.0.2** - *charts support*
 * **0.0.1** - *initial work*
 

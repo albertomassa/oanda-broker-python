@@ -21,7 +21,7 @@ def main(method, account, instrument, granularity, count, options):
 
 def instruments(account):
     account = fill_account(account)
-    instruments = oanda.getInstruments(account)
+    instruments = oanda.get_instruments(account)
     if(instruments == None): 
         return
     headers = [
@@ -36,7 +36,7 @@ def instruments(account):
     return
 
 def candles(instrument, granularity, count):
-    candles = oanda.getCandles(instrument, count, granularity)
+    candles = oanda.get_candles(instrument, count, granularity)
     if(candles == None):
         return
     headers = [

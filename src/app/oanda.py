@@ -29,7 +29,7 @@ def delete(resource_url, body=None):
     #todo
     return
 
-def getCandles(instrument, count, granularity):
+def get_candles(instrument, count, granularity):
     instrument = instrument.strip()
     url = config['OANDAResources']['broker.resources.candles'].replace('$INSTRUMENT_ID$', instrument)
     count = count.strip()
@@ -47,7 +47,7 @@ def getCandles(instrument, count, granularity):
         list.append(c)
     return list
 
-def getInstruments(account):
+def get_instruments(account):
     url = config['OANDAResources']['broker.resources.instruments'].replace('$ACCOUNT_ID$', account)
     response = get(url)
     instruments = response.get('instruments')
@@ -58,4 +58,11 @@ def getInstruments(account):
     for instrument in instruments:
         i = Instrument(json.dumps(instrument))
         list.append(i)
+    return list
+
+def get_name_instruments(account):
+    instruments = get_instruments(account)
+    list = []
+    for instrument in instruments:
+        list.append(instrument.name)
     return list
